@@ -19,6 +19,7 @@ function Header() {
     title.textContent = "Lambda Times";
     const temp = document.createElement("span");
     temp.classList.add("temp");
+    temp.textContent = "98°";
     let tags = [date,title,temp];
     tags.forEach( e => {
         div.appendChild(e);
@@ -27,6 +28,7 @@ function Header() {
     return div;
 }
 
-const header = document.querySelector('.headerContainer');
+const header = document.querySelector('.header-container');
+console.log(header);
 const child = Header();
 header.appendChild(child);
