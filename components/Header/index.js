@@ -10,14 +10,14 @@
 // And add it to the DOM in the .headerContainer component
 
 function Header() {
-    div = document.createElement("div");
+    const div = document.createElement("div");
     div.classList.add("header");
-    date = document.createElement("span");
+    const date = document.createElement("span");
     date.classList.add("date");
     date.textContent = "SMARCH 28, 2019";
-    title = document.createElement("h1");
+    const title = document.createElement("h1");
     title.textContent = "Lambda Times";
-    temp = document.createElement("span");
+    const temp = document.createElement("span");
     temp.classList.add("temp");
     let tags = [date,title,temp];
     tags.forEach( e => {
@@ -26,3 +26,6 @@ function Header() {
 
     return div;
 }
+
+const header = document.querySelector('.headerContainer');
+header.appendChild(Header());
