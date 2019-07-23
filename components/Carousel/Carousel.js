@@ -17,3 +17,25 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+const imageFolder = "./assets/carousel";
+import readdir from 'fs';
+readdir(imageFolder, (err, files) => {
+  files.forEach(file =>{
+    console.log(file);
+  });
+});
+
+
+function Carousel(){
+  function createElement(element, style, content, image){
+    const div = document.createElement(element);
+    if (style != null){ div.classList = style; }
+    if (content != null){ div.textContent = content; }
+    if (image != null){ div.src = image; }
+  }
+
+  const div = createElement('div','carousel');
+  const imageArr = ["./assets/carousel/computer.jpeg",]
+
+}
